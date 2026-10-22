@@ -2,6 +2,18 @@
 
 This guide sets up the custom **dark-purple.omp.json** theme in PowerShell and Windows Terminal. Keep the theme file alongside this guide when moving to another computer.
 
+## Contents
+
+- [Install the software](#1-install-the-software)
+- [Install and select a font](#2-install-and-select-a-font)
+- [Put the theme file in a fixed location](#3-put-the-theme-file-in-a-fixed-location)
+- [Try the theme immediately](#4-try-the-theme-immediately)
+- [Activate the theme at every startup](#5-activate-the-theme-at-every-startup)
+- [What the theme displays](#6-what-the-theme-displays)
+- [Troubleshooting](#7-troubleshooting)
+- [Move to another computer](#8-move-to-another-computer)
+- [Documentation](#documentation)
+
 ## 1. Install the software
 
 Open PowerShell. Install Oh My Posh:
