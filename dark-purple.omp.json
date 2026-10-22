@@ -1,0 +1,126 @@
+{
+  "$schema": "https://githubusercontent.com",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#1A1625",
+          "foreground": "#BD93F9",
+          "leading_diamond": "░▒▓",
+          "style": "diamond",
+          "template": "    ",
+          "type": "os"
+        },
+        {
+          "background": "#FF5555",
+          "foreground": "#1A1625",
+          "powerline_symbol": "",
+          "style": "powerline",
+          "template": "  ADMIN ",
+          "type": "root"
+        },
+        {
+          "background": "#2D243F",
+          "foreground": "#E1D5EC",
+          "powerline_symbol": "",
+          "style": "powerline",
+          "template": "  {{ .Path }} ",
+          "type": "path",
+          "properties": {
+            "style": "folder"
+          }
+        },
+        {
+          "background": "#44355B",
+          "foreground": "#FF79C6",
+          "powerline_symbol": "",
+          "style": "powerline",
+          "template": " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <#BD93F9>{{ if .Behind }}⇣{{ end }}{{ if .Ahead }}⇡{{ end }}</> ",
+          "type": "git",
+          "properties": {
+            "branch_icon": " ",
+            "fetch_status": true
+          }
+        },
+        {
+          "background": "#1A1625",
+          "foreground": "#BD93F9",
+          "style": "diamond",
+          "trailing_diamond": "",
+          "template": "    {{ .FormattedMs }} ",
+          "type": "executiontime",
+          "properties": {
+            "threshold": 500
+          }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#2D243F",
+          "style": "plain",
+          "template": "",
+          "type": "text"
+        },
+        {
+          "background": "#2D243F",
+          "foreground": "#BD93F9",
+          "style": "plain",
+          "template": "  {{ .Full }} ",
+          "type": "dotnet"
+        },
+        {
+          "background": "#2D243F",
+          "foreground": "#44355B",
+          "style": "plain",
+          "template": "",
+          "type": "text"
+        },
+        {
+          "background": "#44355B",
+          "foreground": "#FFB86C",
+          "properties": {
+            "charging_icon": "   ",
+            "discharging_icon": "   "
+          },
+          "style": "plain",
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}% {{ end }}",
+          "type": "battery"
+        },
+        {
+          "background": "#44355B",
+          "foreground": "#E1D5EC",
+          "style": "plain",
+          "template": "   {{ .CurrentDate | date \"15:04:05\" }} ",
+          "type": "time"
+        },
+        {
+          "background": "#44355B",
+          "foreground": "#1A1625",
+          "style": "plain",
+          "template": "░▒▓",
+          "type": "text"
+        }
+      ],
+      "type": "rprompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#BD93F9",
+          "style": "plain",
+          "template": "❯ ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 3
+}
